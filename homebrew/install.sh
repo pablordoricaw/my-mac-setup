@@ -29,6 +29,7 @@ brew install mas
 
 echo "⬇️ Installing applications with Homebrew..."
 brew install --cask dozer
+brew install --cask elgato-control-center
 brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask lastpass
