@@ -108,20 +108,24 @@ function reset_dock {
 # WARNING: permanently clears existing dock
 clear_dock
 
-add_app_to_dock "Firefox"
+add_app_to_dock "Finder"
+add_app_to_dock "System Preferences"
 add_spacer_to_dock
-add_app_to_dock "Fantastical"
-add_app_to_dock "OmniFocus"
-add_app_to_dock "Notes"
-add_app_to_dock "Obsidian"
-add_spacer_to_dock
-add_app_to_dock "iTerm"
-add_app_to_dock "Sublime Text"
-add_app_to_dock "Visual Studio Code"
-add_app_to_dock "Tower"
-add_spacer_to_dock
-add_app_to_dock "Shortcuts"
 add_app_to_dock "Spotify"
-add_folder_to_dock "${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Documents/Screenshots" -s 2 -d 0 -v 2
+add_app_to_dock "LastPass"
+add_app_to_dock "Google Chrome"
+add_spacer_to_dock
+add_app_to_dock "Visual Studio Code"
+add_app_to_dock "iTerm"
+add_spacer_to_dock
+add_app_to_dock "Messages"
+add_app_to_dock "Slack"
+add_spacer_to_dock
+add_app_to_dock "Calendar"
+add_app_to_dock "Reminders"
+add_app_to_dock "Notes"
+add_app_to_dock "Notion"
+add_spacer_to_dock
+add_folder_to_dock "${HOME}/Downloads" -s 2 -d 0 -v 2
 
 killall Dock
