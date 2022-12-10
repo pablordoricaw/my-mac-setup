@@ -14,6 +14,14 @@ else
   brew update
 fi
 
+if [[ $PATH != *"brew"* ]]; then
+  echo "📝 Adding Homebrew to PATH..."
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/pablordoricaw/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/pablordoricaw/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  echo "⭐️ Homebrew is in your PATH. You can now use it!"
+fi
+
 echo "⬇️ Installing Homebrew formulae..."
 brew install chezmoi
 brew install gh
