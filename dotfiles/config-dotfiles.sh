@@ -10,7 +10,7 @@ if test "$(chezmoi --version)"
   echo "";
   
   echo "🗝️ Downloading Dotfiles..."
-  chezmoi init git@github.com/${dotfiles_repo}
+  chezmoi init git@github.com:${dotfiles_repo}
   chezmoi apply -v
 else
   echo "❌ chezmoi is not installed."
