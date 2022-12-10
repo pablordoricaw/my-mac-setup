@@ -13,6 +13,12 @@ if test "$(gh --version)"
 
   echo "🔁 Adding your SSH key to your GitHub account..."
   gh ssh-key add $HOME/.ssh/${key_name}.pub
+  
+  echo "🗝️ SSH Key name 'user@computername'"
+  
+  echo "🔁 Testing SSH connection with GitHub..."
+  ssh -T git@github.com
+  
 else
   echo "❌ gh is not installed."
   echo "  - run brew install gh to install it."
