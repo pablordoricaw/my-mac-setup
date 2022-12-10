@@ -8,7 +8,6 @@ if test ! "$(brew --version)"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
   && \
   echo "⭐️ Installed Homebrew! This session will be terminated. Open a new session to continue."
-  exit
 else
   echo "🔁 Homebrew is already installed! Updating instead."
   brew update
