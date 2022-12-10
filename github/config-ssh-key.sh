@@ -9,6 +9,7 @@ if test "$(gh --version)"
 
   echo "🤵‍♂️ Adding your SSH key to the ssh-agent..."
   echo -e "Host *.github.com\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/${key_name}" >> ${HOME}/.ssh/config
+  ssh-add --apple-use-keychain $HOME/.ssh/${key_name}
 
   echo "🔁 Adding your SSH key to your GitHub account..."
   gh ssh-key add $HOME/.ssh/${key_name}.pub
