@@ -1,6 +1,6 @@
 # My Mac Setup
 
-These are the scripts that I use to setup and maintain my Mac forked from [Jason's repo](https://github.com/jsnmrs/dotfiles). 
+These are the scripts that I use to setup and maintain my Mac forked from [Jason's repo](https://github.com/pablordoricaw/my-mac-setup). 
 > Thank you Jason!
 
 As you can see, heavily depend on :beer: [Homebrew](brew.sh)
@@ -9,8 +9,9 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 - [Step zero](#step-zero)
 - [Getting started, using Git](#getting-started-using-git)
-- [Install scripts](#install-scripts)
+- [Install instructions](#install-instructions)
   - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
+  - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
   - [Configure macOS dock icons](#configure-macos-dock-icons)
 - [Housekeeping](#housekeeping)
 - [Inspiration](#heavily-inspired-by)
@@ -25,17 +26,17 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 ## Getting started, using Git
 
-You can clone the repository wherever you want. I like to keep it in `~/Projects/dotfiles`.
+You can clone the repository wherever you want. I like to keep it in `~/Projects/my-mac-setup`.
 
 ```bash
-git clone https://github.com/pablordoricaw/my-mac-setup.git && cd dotfiles
+git clone https://github.com/pablordoricaw/my-mac-setup.git && cd my-mac-setup
 ```
 
-## Install scripts
+## Installation instructions
 
 ### Installing Homebrew, binaries, and applications
 
-The [homebrew/install.sh](https://github.com/jsnmrs/dotfiles/blob/main/homebrew/install.sh) script will:
+The [homebrew/install.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/homebrew/install.sh) script will:
 
 1. Install (or update) Homebrew
 2. Install a list of Homebrew formulae
@@ -43,11 +44,47 @@ The [homebrew/install.sh](https://github.com/jsnmrs/dotfiles/blob/main/homebrew/
 
 **Run it:** `source homebrew/install.sh`
 
-### Configure macOS dock icons
+### Configure SSH Key for GitHub
 
-The [macos/configure-dock.sh](https://github.com/jsnmrs/dotfiles/blob/main/macos/configure-dock.sh) script will clear and add specific application icons to the dock.
+**Pre-requisites**: Needs the [Github CLI `gh`](https://cli.github.com/) installed.
 
-**Run it:** `source macos/configure-dock.sh`
+The [github/config-ssh-key.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/github/config-ssh-key.sh) script will generate a new SSH key and add it to your GitHub account.
+
+**Run it:** `source github/config-ssh-key.sh`
+
+### Configure macOS 
+
+#### Configure Dotfiles
+
+**Pre-requisites**: Needs `chezmoi` installed and SSH key setup in your GitHub account
+
+The [dotfiles/config-dotfiles.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/dotfiles/config-dotfiles.sh) will use `chezmoi` to clone the [dotfiles repo](https://github.com/pablordoricaw/my-mac-dotfiles) and apply them.
+
+**Run it:** `source dotfiles/config-dotfiles.sh`
+
+#### Configure macOS
+
+**Pre-requisites**: Needs the `.macos` file from the dotfiles.
+
+The `~/.macos` file applied with `chezmoi` will config macOS.
+
+**Run it:** `source ~/.macos`
+
+#### Configure Dock icons
+
+**Pre-requisites**: (Soft) Needs applications to be installed with 🍺 Homebrew.
+
+The [macos/config-dock.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/config-dock.sh) script will clear and add specific application icons to the dock.
+
+**Run it:** `source macos/config-dock.sh`
+
+## Uninstalling
+
+It is possible to uninstall the packages and aplications as well as reset the configs. 
+
+**Note:** If you're looking to uninstall all packages and applications and reset all configs consider looking into Apple's docs to [Erase your Mac and reset it to factory settings](https://support.apple.com/en-us/HT212749#:~:text=From%20the%20Apple%20menu%20%EF%A3%BF,Erase%20All%20Content%20and%20Settings.)
+
+
 
 ## Housekeeping
 
