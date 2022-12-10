@@ -5,6 +5,8 @@ These are the scripts that I use to setup and maintain my Mac forked from [Jason
 
 As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
+## Table of Contents
+
 - [Step zero](#step-zero)
 - [Getting started, using Git](#getting-started-using-git)
 - [Install scripts](#install-scripts)
