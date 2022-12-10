@@ -7,8 +7,6 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 - [Step zero](#step-zero)
 - [Getting started, using Git](#getting-started-using-git)
-- [Establishing dotfiles](#establishing-dotfiles)
-  - [Add private commands and settings to `.extra`](#add-private-commands-and-settings-to-extra)
 - [Install scripts](#install-scripts)
   - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
   - [Configure macOS dock icons](#configure-macos-dock-icons)
@@ -29,27 +27,6 @@ You can clone the repository wherever you want. I like to keep it in `~/Projects
 
 ```bash
 git clone https://github.com/pablordoricaw/my-mac-setup.git && cd dotfiles
-```
-
-### Add private commands and settings to `.extra`
-
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add commands and settings you don’t want to commit to a public repository. My `~/.extra` looks something like this:
-
-```bash
-# Git credentials
-GIT_AUTHOR_NAME="Jason Morris"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="jason@mailinator.com"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-
-# Project aliases
-alias clientsite="cd ~/Projects/clientsite"
-alias businesspapers="cd ~/Projects/my/important/business/papers"
-
-# Access tokens
-export APItoken=0000ffff0000ffff0000ffff0000ffff0000ffff
 ```
 
 ## Install scripts
