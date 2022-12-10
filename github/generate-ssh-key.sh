@@ -11,7 +11,7 @@ echo -e "Host *.github.com\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/${key_na
 echo "🔁 Adding your SSH key to your GitHub account..."
 if test "$(gh --version)"
   then
-  gh ssh-key add $HOME/.ssh/${key_name}
+  gh ssh-key add $HOME/.ssh/${key_name}.pub
 else
   echo "❌ GitHub CLI is not installed." 
   echo "  - Failed adding key to GitHub account."
