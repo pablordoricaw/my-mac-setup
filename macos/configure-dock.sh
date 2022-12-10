@@ -119,7 +119,5 @@ add_app_to_dock "Calendar"
 add_app_to_dock "Reminders"
 add_app_to_dock "Notes"
 add_app_to_dock "Notion"
-add_spacer_to_dock
-add_folder_to_dock "${HOME}/Downloads" -s 2 -d 0 -v 2
 
 killall Dock
