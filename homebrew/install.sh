@@ -7,7 +7,7 @@ if test ! "$(brew --version)"
   then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
   && \
-  echo "⭐️ Installed Homebrew! This session will be terminated. Open a new session to continue."
+  echo "⭐️ Installed Homebrew!"
 else
   echo "🔁 Homebrew is already installed! Updating instead."
   brew update
@@ -33,6 +33,7 @@ brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask lastpass
 brew install --cask miniconda
+brew install --cask notion
 brew install --cask rocket
 brew install --cask slack
 brew install --cask spectacle
@@ -40,3 +41,4 @@ brew install --cask spotify
 brew install --cask visual-studio-code
 
 echo "This session will be terminated. Open a new session to use the newly installed formulae"
+exit
