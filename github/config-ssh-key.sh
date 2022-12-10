@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 key_name=github_id_ed25519
+host=*.github.com
 
 if test "$(gh --version)"
   then
@@ -8,7 +9,7 @@ if test "$(gh --version)"
   ssh-keygen -t ed25519 -f $HOME/.ssh/${key_name}
 
   echo "🤵‍♂️ Adding your SSH key to the ssh-agent..."
-  echo -e "Host *.github.com\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/${key_name}" >> ${HOME}/.ssh/config
+  echo -e "Host ${host}\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/${key_name}" >> ${HOME}/.ssh/config
   ssh-add --apple-use-keychain $HOME/.ssh/${key_name}
 
   echo "🔁 Adding your SSH key to your GitHub account..."
