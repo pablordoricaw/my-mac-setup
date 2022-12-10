@@ -9,7 +9,7 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 - [Step zero](#step-zero)
 - [Getting started, using Git](#getting-started-using-git)
-- [Install instructions](#install-instructions)
+- [Installation instructions](#installation-instructions)
   - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
   - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
   - [Configure macOS dock icons](#configure-macos-dock-icons)
@@ -64,7 +64,7 @@ The [dotfiles/config-dotfiles.sh](https://github.com/pablordoricaw/my-mac-setup/
 
 **Run it:** `source dotfiles/config-dotfiles.sh`
 
-#### Configure macOS
+#### Configure macOS dock icons
 
 **Pre-requisites**: Needs the `.macos` file from the dotfiles.
 
@@ -90,7 +90,7 @@ To execute the scripts use the `source` command followed by the path to the scri
 
 **Important:** Be sure to check the pre-requisites section of the section in the installation instructions, as the same pre-requisites will apply to execute these scripts.
 
-**Note:** If you're looking to uninstall all packages and applications and reset all configs consider looking into Apple's docs to [Erase your Mac and reset it to factory settings](https://support.apple.com/en-us/HT212749#:~:text=From%20the%20Apple%20menu%20%EF%A3%BF,Erase%20All%20Content%20and%20Settings.)
+ > **Note:** If you're looking to uninstall all packages and applications and reset all configs consider looking into Apple's docs to [Erase your Mac and reset it to factory settings](https://support.apple.com/en-us/HT212749#:~:text=From%20the%20Apple%20menu%20%EF%A3%BF,Erase%20All%20Content%20and%20Settings.)
 
 ## Housekeeping
 
@@ -100,11 +100,11 @@ To execute the scripts use the `source` command followed by the path to the scri
 ## To Do
 
 This list contains things that I want this repo to setup in my Mac that I haven't done so far
-[ ] Install the [ToothFairy application](https://c-command.com/toothfairy/)
+- [ ] Install the [ToothFairy application](https://c-command.com/toothfairy/)
+- [ ] Install the [Unsplash Wallpapers application](https://apps.apple.com/us/app/unsplash-wallpapers/id1284863847?mt=12)
 
 This list contains ideas to improve this repo
-[ ] End-to-end setup of Mac with one command
-
+- [ ] End-to-end setup of Mac with one command
 
 ## Heavily inspired by
 
