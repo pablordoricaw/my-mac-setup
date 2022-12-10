@@ -10,7 +10,7 @@ if test "$(chezmoi --version)"
   echo "";
   
   echo "🗝️ Downloading Dotfiles..."
-  chezmoi init --init git@github.com:${dotfiles_repo}.git
+  chezmoi init --apply git@github.com:${dotfiles_repo}.git
 else
   echo "❌ chezmoi is not installed."
   echo "  - run brew install chezmoi to install it."
