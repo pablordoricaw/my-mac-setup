@@ -13,6 +13,7 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
   - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
   - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
   - [Configure macOS dock icons](#configure-macos-dock-icons)
+- [Uninstall instructions](#uninstall-instructions)
 - [Housekeeping](#housekeeping)
 - [Inspiration](#heavily-inspired-by)
 
@@ -26,7 +27,7 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 ## Getting started, using Git
 
-You can clone the repository wherever you want. I like to keep it in `~/Projects/my-mac-setup`.
+You can clone the repository wherever you want. I like to keep it in `~/Documents/Projects/my-mac-setup`.
 
 ```bash
 git clone https://github.com/pablordoricaw/my-mac-setup.git && cd my-mac-setup
@@ -78,13 +79,17 @@ The [macos/config-dock.sh](https://github.com/pablordoricaw/my-mac-setup/blob/ma
 
 **Run it:** `source macos/config-dock.sh`
 
-## Uninstalling
+## Uninstall instructions
 
-It is possible to uninstall the packages and aplications as well as reset the configs. 
+It is possible to uninstall the packages and aplications as well as reset the configs.
+
+Inside the folders there are scripts that start with `uninstall-` or `reset-`. Use these files to uninstall apps and/or packages and reset configs.
+
+To execute the scripts use the `source` command followed by the path to the script.
+
+**Important:** Be sure to check the pre-requisites section of the section in the installation instructions, as the same pre-requisites will apply to execute these scripts.
 
 **Note:** If you're looking to uninstall all packages and applications and reset all configs consider looking into Apple's docs to [Erase your Mac and reset it to factory settings](https://support.apple.com/en-us/HT212749#:~:text=From%20the%20Apple%20menu%20%EF%A3%BF,Erase%20All%20Content%20and%20Settings.)
-
-
 
 ## Housekeeping
 
