@@ -99,17 +99,11 @@ function clear_dock {
   defaults write com.apple.dock persistent-apps -array
 }
 
-function reset_dock {
-  # reset macOS Dock to default settings
-
-  defaults write com.apple.dock; killall Dock
-}
-
 # WARNING: permanently clears existing dock
 clear_dock
 
 # add_app_to_dock "Finder" Automatically added
-add_app_to_dock "System Preferences"
+add_app_to_dock "System Settings" # System Preferences
 add_spacer_to_dock
 add_app_to_dock "Spotify"
 add_app_to_dock "LastPass"
