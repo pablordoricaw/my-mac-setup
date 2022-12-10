@@ -16,8 +16,8 @@ fi
 
 if [[ $PATH != *"brew"* ]]; then
   echo "📝 Adding Homebrew to PATH..."
-  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/pablordoricaw/.zprofile
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/pablordoricaw/.zprofile
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
   echo "⭐️ Homebrew is in your PATH. You can now use it!"
 fi
