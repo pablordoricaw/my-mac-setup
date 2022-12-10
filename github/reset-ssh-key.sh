@@ -14,6 +14,7 @@ if test "$(gh --version)"
   rm ${HOME}/.ssh/${key_name}
   rm ${HOME}/.ssh/${key_name}.pub
 
+  # Code from Cyrus' comment on https://stackoverflow.com/questions/36110829/how-can-i-remove-a-host-entry-from-an-ssh-config-file
   echo "Removing GitHub entry in ~/.ssh/config..."
   sed 's/^Host/\n&/' file | sed '/^Host '"$host"'$/,/^$/d;/^$/d'
 
