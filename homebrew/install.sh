@@ -21,6 +21,9 @@ if [[ $PATH != *"brew"* ]]; then
   echo "⭐️ Homebrew is in your PATH. You can now use it!"
 fi
 
+echo "🔁 Setting up additional Taps..."
+brew tap homebrew/cask-drivers # needed for Elgato Control Center
+
 echo "⬇️ Installing Homebrew formulae..."
 brew install chezmoi
 brew install gh
