@@ -19,9 +19,8 @@ if test "$(gh --version)"
   sed 's/^Host/\n&/' file | sed '/^Host '"$host"'$/,/^$/d;/^$/d'
 
   echo "🔁 Deleting SSH key from your GitHub account..."
-  echo "🔁 Please copy the ID of the SSH key to delete"
   gh ssh-key list
-  echo "🆔 Please enter the ID of the SSH key to delete"
+  echo "🆔 Please copy from above & paste below the ID of the SSH key to delete and hit ENTER."
   read key_id
   gh ssh-key delete ${key_id}
 
