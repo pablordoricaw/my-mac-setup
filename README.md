@@ -96,6 +96,15 @@ To execute the scripts use the `source` command followed by the path to the scri
 - `brew doctor` - to check in case anything went wrong while using Hombrew.
 - `brew list` – list installed Homebrew formulae, including casks
 
+## ToDo
+
+This list contains things that I want this repo to setup in my Mac that I haven't done so far
+[ ] Install the [ToothFairy application](https://c-command.com/toothfairy/)
+
+This list contains ideas to improve this repo
+[ ] End-to-end setup of Mac with one command
+
+
 ## Heavily inspired by
 
 - [Mathias Bynens’ dotfiles repo](https://mths.be/dotfiles)
