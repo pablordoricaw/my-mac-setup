@@ -108,7 +108,7 @@ function reset_dock {
 # WARNING: permanently clears existing dock
 clear_dock
 
-add_app_to_dock "Finder"
+# add_app_to_dock "Finder" Automatically added
 add_app_to_dock "System Preferences"
 add_spacer_to_dock
 add_app_to_dock "Spotify"
