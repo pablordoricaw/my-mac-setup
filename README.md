@@ -15,6 +15,7 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
   - [Configure macOS dock icons](#configure-macos-dock-icons)
 - [Uninstall instructions](#uninstall-instructions)
 - [Housekeeping](#housekeeping)
+- [To Do](#to-do)
 - [Inspiration](#heavily-inspired-by)
 
 ## Step zero
@@ -96,7 +97,7 @@ To execute the scripts use the `source` command followed by the path to the scri
 - `brew doctor` - to check in case anything went wrong while using Hombrew.
 - `brew list` – list installed Homebrew formulae, including casks
 
-## ToDo
+## To Do
 
 This list contains things that I want this repo to setup in my Mac that I haven't done so far
 [ ] Install the [ToothFairy application](https://c-command.com/toothfairy/)
