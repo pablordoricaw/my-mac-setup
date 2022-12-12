@@ -3,6 +3,7 @@
 echo "⬇️ Installing App Store applications..."
 echo "📝 Note that you need to have the CLI tool mas installed."
 read -r -q "REPLY?Do you want to continue the installation? (y/n)";
+echo "";
 
 if test "$(which mas)"
   then
