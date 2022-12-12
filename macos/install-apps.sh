@@ -7,10 +7,12 @@ read -r -q "REPLY?Do you want to continue the installation? (y/n)";
 if test "$(which mas)"
   then
   
-  echo "Installing Unsplash Wallpaper..."
+  echo "⬇️ Installing Unsplash Wallpaper..."
   mas install 1284863847 # Unsplash Wallpaper
-  echo "Installing TootFairy"
+  echo "⬇️ Installing TootFairy"
   mas install 1191449274 # ToothFairy
+
+  echo "⭐ Installed applications!"
 
 else
   echo "❌  mas is not installed."
