@@ -39,7 +39,7 @@ git clone https://github.com/pablordoricaw/my-mac-setup.git && cd my-mac-setup
 
 ### Installing Homebrew, binaries, and applications
 
-The [homebrew/install.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/homebrew/install.sh) script will:
+The [`homebrew/install.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/homebrew/install.sh) script will:
 
 1. Install (or update) Homebrew
 2. Install a list of Homebrew formulae
@@ -51,7 +51,7 @@ The [homebrew/install.sh](https://github.com/pablordoricaw/my-mac-setup/blob/mai
 
 **Pre-requisites**: Needs the [Github CLI `gh`](https://cli.github.com/) installed.
 
-The [github/config-ssh-key.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/github/config-ssh-key.sh) script will generate a new SSH key and add it to your GitHub account.
+The [`github/config-ssh-key.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/github/config-ssh-key.sh) script will generate a new SSH key and add it to your GitHub account.
 
 **Run it:** `source github/config-ssh-key.sh`
 
@@ -61,7 +61,7 @@ The [github/config-ssh-key.sh](https://github.com/pablordoricaw/my-mac-setup/blo
 
 **Pre-requisites**: Needs `chezmoi` installed and SSH key setup in your GitHub account
 
-The [dotfiles/config-dotfiles.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/dotfiles/config-dotfiles.sh) will use `chezmoi` to clone the [dotfiles repo](https://github.com/pablordoricaw/my-mac-dotfiles) and apply them.
+The [`dotfiles/config-dotfiles.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/dotfiles/config-dotfiles.sh) will use `chezmoi` to clone the [dotfiles repo](https://github.com/pablordoricaw/my-mac-dotfiles) and apply them.
 
 **Run it:** `source dotfiles/config-dotfiles.sh`
 
@@ -77,7 +77,7 @@ The `~/.macos` file applied with `chezmoi` will config macOS.
 
 **Pre-requisites**: (Soft) Needs applications to be installed with 🍺 Homebrew.
 
-The [macos/config-dock.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/config-dock.sh) script will clear and add specific application icons to the dock.
+The [`macos/config-dock.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/config-dock.sh) script will clear and add specific application icons to the dock.
 
 **Run it:** `source macos/config-dock.sh`
 
@@ -113,8 +113,8 @@ To execute the scripts use the `source` command followed by the path to the scri
 ## To Do
 
 This list contains things that I want this repo to setup in my Mac that I haven't done so far
-- [ ] Install the [ToothFairy application](https://c-command.com/toothfairy/)
-- [ ] Install the [Unsplash Wallpapers application](https://apps.apple.com/us/app/unsplash-wallpapers/id1284863847?mt=12)
+- [x] Install the [ToothFairy application](https://c-command.com/toothfairy/)
+- [x] Install the [Unsplash Wallpapers application](https://apps.apple.com/us/app/unsplash-wallpapers/id1284863847?mt=12)
 
 This list contains ideas to improve this repo
 - [ ] End-to-end setup of Mac with one command
