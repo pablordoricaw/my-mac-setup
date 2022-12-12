@@ -87,9 +87,11 @@ The [macos/config-dock.sh](https://github.com/pablordoricaw/my-mac-setup/blob/ma
 1. Sign in manually into the App Store. 
 2. Needs [`mas`](https://github.com/mas-cli/mas) installed. It is installed with 🍺 Homebrew
 
-ToDo
+The [`macos/install-apps.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/install-apps.sh) script will install the App Store applications. It uses the `mas` CLI to do so.
 
-**Run it:**
+> To add more apps to be installed refer to the [Usage section of the README](https://github.com/mas-cli/mas#-usage) of `mas`
+
+**Run it:** `source macos/install-apps.sh`
 
 ## Uninstall instructions
 
