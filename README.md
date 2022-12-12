@@ -13,6 +13,7 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
   - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
   - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
   - [Configure macOS dock icons](#configure-macos-dock-icons)
+  - [Install App Store Applications](#install-app-store-applications)
 - [Uninstall instructions](#uninstall-instructions)
 - [Housekeeping](#housekeeping)
 - [To Do](#to-do)
@@ -79,6 +80,16 @@ The `~/.macos` file applied with `chezmoi` will config macOS.
 The [macos/config-dock.sh](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/config-dock.sh) script will clear and add specific application icons to the dock.
 
 **Run it:** `source macos/config-dock.sh`
+
+## Install App Store Applications
+
+**Pre-requisites**: 
+1. Sign in manually into the App Store. 
+2. Needs [`mas`](https://github.com/mas-cli/mas) installed. It is installed with 🍺 Homebrew
+
+ToDo
+
+**Run it:**
 
 ## Uninstall instructions
 
