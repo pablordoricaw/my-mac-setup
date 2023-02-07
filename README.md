@@ -61,7 +61,7 @@ The [`github/config-ssh-key.sh`](https://github.com/pablordoricaw/my-mac-setup/b
 
 **Pre-requisites**: Needs `chezmoi` installed and SSH key setup in your GitHub account
 
-The [`dotfiles/config-dotfiles.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/dotfiles/config-dotfiles.sh) will use `chezmoi` to clone the [dotfiles repo](https://github.com/pablordoricaw/my-mac-dotfiles) and apply them.
+The [`dotfiles/config-dotfiles.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/dotfiles/config-dotfiles.sh) will use `chezmoi` to clone the [dotfiles repo](https://github.com/pablordoricaw/my-macos-dotfiles) and apply them.
 
 **Run it:** `source dotfiles/config-dotfiles.sh`
 
