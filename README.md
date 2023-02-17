@@ -1,6 +1,6 @@
 # My Mac Setup
 
-These are the scripts that I use to setup and maintain my Mac forked from [Jason's repo](https://github.com/pablordoricaw/my-mac-setup). 
+These are the scripts that I use to setup and maintain my Mac forked from [Jason's repo](https://github.com/pablordoricaw/my-mac-setup).
 > Thank you Jason!
 
 As you can see, heavily depend on :beer: [Homebrew](brew.sh)
@@ -90,7 +90,7 @@ The [`macos/config-dock.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/
 
 **Pre-requisites**:
 
-1. Sign in manually into the App Store. 
+1. Sign in manually into the App Store.
 2. Needs [`mas`](https://github.com/mas-cli/mas) installed. It is installed with 🍺 Homebrew
 
 The [`macos/install-apps.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/install-apps.sh) script will install the App Store applications. It uses the `mas` CLI to do so.
@@ -122,12 +122,18 @@ This list contains things that I want this repo to setup in my Mac that I haven'
 
 - [x] Install the [ToothFairy application](https://c-command.com/toothfairy/)
 - [x] Install the [Unsplash Wallpapers application](https://apps.apple.com/us/app/unsplash-wallpapers/id1284863847?mt=12)
+- [x] Install the [Things 3](https://apps.apple.com/us/app/things-3/id904237743)
 
 This list contains ideas to improve this repo
 
 - [ ] End-to-end setup of Mac with one command
+- [ ] Include dependencies between the setup steps.
+  - [ ] A step always runs after the step(s) it depends on.
+  - [ ] A step doesn't run and alerts if a *parent* step didn't complete successfully
 
 ## Heavily inspired by
+
+The following list contains the inspirations for Jason repository from when I forked his repository.
 
 - [Mathias Bynens’ dotfiles repo](https://mths.be/dotfiles)
 - [Kevin Deldycke’s dotfiles repo](https://github.com/kdeldycke/dotfiles)
