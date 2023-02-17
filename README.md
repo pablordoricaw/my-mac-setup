@@ -7,17 +7,22 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 ## Table of Contents
 
-- [Step zero](#step-zero)
-- [Getting started, using Git](#getting-started-using-git)
-- [Installation instructions](#installation-instructions)
-  - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
-  - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
-  - [Configure macOS dock icons](#configure-macos-dock-icons)
+- [My Mac Setup](#my-mac-setup)
+  - [Table of Contents](#table-of-contents)
+  - [Step zero](#step-zero)
+  - [Getting started, using Git](#getting-started-using-git)
+  - [Installation instructions](#installation-instructions)
+    - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
+    - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
+    - [Configure macOS](#configure-macos)
+      - [Configure Dotfiles](#configure-dotfiles)
+      - [Configure macOS dock icons](#configure-macos-dock-icons)
+      - [Configure Dock icons](#configure-dock-icons)
   - [Install App Store Applications](#install-app-store-applications)
-- [Uninstall instructions](#uninstall-instructions)
-- [Housekeeping](#housekeeping)
-- [To Do](#to-do)
-- [Inspiration](#heavily-inspired-by)
+  - [Uninstall instructions](#uninstall-instructions)
+  - [Housekeeping](#housekeeping)
+  - [To Do](#to-do)
+  - [Heavily inspired by](#heavily-inspired-by)
 
 ## Step zero
 
@@ -45,7 +50,7 @@ The [`homebrew/install.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/m
 2. Install a list of Homebrew formulae
 3. Install a list of applications via Homebrew Cask
 
-**Run it:** `source homebrew/install.sh`
+**Run it:** `source ./homebrew/install.sh`
 
 ### Configure SSH Key for GitHub
 
@@ -53,9 +58,9 @@ The [`homebrew/install.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/m
 
 The [`github/config-ssh-key.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/github/config-ssh-key.sh) script will generate a new SSH key and add it to your GitHub account.
 
-**Run it:** `source github/config-ssh-key.sh`
+**Run it:** `source ./github/config-ssh-key.sh`
 
-### Configure macOS 
+### Configure macOS
 
 #### Configure Dotfiles
 
@@ -63,7 +68,7 @@ The [`github/config-ssh-key.sh`](https://github.com/pablordoricaw/my-mac-setup/b
 
 The [`dotfiles/config-dotfiles.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/dotfiles/config-dotfiles.sh) will use `chezmoi` to clone the [dotfiles repo](https://github.com/pablordoricaw/my-macos-dotfiles) and apply them.
 
-**Run it:** `source dotfiles/config-dotfiles.sh`
+**Run it:** `source ./dotfiles/config-dotfiles.sh`
 
 #### Configure macOS dock icons
 
@@ -79,11 +84,12 @@ The `~/.macos` file applied with `chezmoi` will config macOS.
 
 The [`macos/config-dock.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/config-dock.sh) script will clear and add specific application icons to the dock.
 
-**Run it:** `source macos/config-dock.sh`
+**Run it:** `source ./macos/config-dock.sh`
 
 ## Install App Store Applications
 
-**Pre-requisites**: 
+**Pre-requisites**:
+
 1. Sign in manually into the App Store. 
 2. Needs [`mas`](https://github.com/mas-cli/mas) installed. It is installed with 🍺 Homebrew
 
@@ -91,7 +97,7 @@ The [`macos/install-apps.sh`](https://github.com/pablordoricaw/my-mac-setup/blob
 
 > To add more apps to be installed refer to the [Usage section of the README](https://github.com/mas-cli/mas#-usage) of `mas`
 
-**Run it:** `source macos/install-apps.sh`
+**Run it:** `source ./macos/install-apps.sh`
 
 ## Uninstall instructions
 
@@ -113,10 +119,12 @@ To execute the scripts use the `source` command followed by the path to the scri
 ## To Do
 
 This list contains things that I want this repo to setup in my Mac that I haven't done so far
+
 - [x] Install the [ToothFairy application](https://c-command.com/toothfairy/)
 - [x] Install the [Unsplash Wallpapers application](https://apps.apple.com/us/app/unsplash-wallpapers/id1284863847?mt=12)
 
 This list contains ideas to improve this repo
+
 - [ ] End-to-end setup of Mac with one command
 
 ## Heavily inspired by
