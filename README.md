@@ -19,6 +19,10 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
       - [Configure macOS dock icons](#configure-macos-dock-icons)
       - [Configure Dock icons](#configure-dock-icons)
   - [Install App Store Applications](#install-app-store-applications)
+  - [Update Instructions](#update-instructions)
+    - [Update packages installed with Homebrew](#update-packages-installed-with-homebrew)
+    - [Update Applications installed with Homebrew](#update-applications-installed-with-homebrew)
+    - [Update Applications installed with `mas`](#update-applications-installed-with-mas)
   - [Uninstall instructions](#uninstall-instructions)
   - [Housekeeping](#housekeeping)
   - [To Do](#to-do)
@@ -98,6 +102,28 @@ The [`macos/install-apps.sh`](https://github.com/pablordoricaw/my-mac-setup/blob
 > To add more apps to be installed refer to the [Usage section of the README](https://github.com/mas-cli/mas#-usage) of `mas`
 
 **Run it:** `source ./macos/install-apps.sh`
+
+## Update Instructions
+
+The following section contains instructions to update all the installed binaries and applications with 🍺 Homebrew and `mas`.
+
+### Update packages installed with Homebrew
+
+Follow the instructions outlined in the [How do I update my local packages?](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages) section in the [FAQ](https://docs.brew.sh/FAQ) page of Homebrew 🍺.
+
+### Update Applications installed with Homebrew
+
+1. Close all applications installed with Homebrew.
+2. Open the Terminal app
+3. Run the following command to update all applications installed with Homebrew:
+   ```brew upgrade --cask```
+4. Once, applications are updated, run the `macos/config-doc.sh` script.
+
+**Note:** For more details on the `brew upgrade --cask` command refer to the answer by **scribblemaniac** to the [Upgrade all the casks installed via Homebrew Cask](https://stackoverflow.com/questions/31968664/upgrade-all-the-casks-installed-via-homebrew-cask) in StackOverflow.
+
+### Update Applications installed with `mas`
+
+1. Run the `macos/install-apps.sh` script to update all applications installed with `mas`.
 
 ## Uninstall instructions
 
