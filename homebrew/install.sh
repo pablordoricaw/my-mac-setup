@@ -39,6 +39,7 @@ brew install --cask lastpass
 brew install --cask miniconda
 brew install --cask notion
 brew install --cask rocket
+brew install --cask shapr3d
 brew install --cask slack
 brew install --cask spectacle
 brew install --cask spotify
