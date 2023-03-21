@@ -45,6 +45,7 @@ brew install --cask spectacle
 brew install --cask spotify
 brew install --cask snapmaker-luban
 brew install --cask visual-studio-code
+brew install --cask zoom
 
 echo "This session will be terminated. Open a new session to use the newly installed formulae"
 exit
