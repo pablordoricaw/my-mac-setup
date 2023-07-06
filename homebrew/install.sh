@@ -29,6 +29,7 @@ brew install chezmoi
 brew install gh
 brew install git
 brew install mas
+brew install htop
 
 echo "⬇️ Installing applications with Homebrew..."
 brew install --cask dozer
