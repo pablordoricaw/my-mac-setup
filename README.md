@@ -7,24 +7,27 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
 
 ## Table of Contents
 
-- [Step zero](#step-zero)
-- [Getting started, using Git](#getting-started-using-git)
-- [Installation instructions](#installation-instructions)
-  - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
-  - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
-  - [Configure macOS](#configure-macos)
-    - [Configure Dotfiles](#configure-dotfiles)
-    - [Configure macOS dock icons](#configure-macos-dock-icons)
-    - [Configure Dock icons](#configure-dock-icons)
-- [Install App Store Applications](#install-app-store-applications)
-- [Update Instructions](#update-instructions)
-  - [Update packages installed with Homebrew](#update-packages-installed-with-homebrew)
-  - [Update Applications installed with Homebrew](#update-applications-installed-with-homebrew)
-  - [Update Applications installed with `mas`](#update-applications-installed-with-mas)
-- [Uninstall instructions](#uninstall-instructions)
-- [Housekeeping](#housekeeping)
-- [To Do](#to-do)
-- [Heavily inspired by](#heavily-inspired-by)
+- [My Mac Setup](#my-mac-setup)
+  - [Table of Contents](#table-of-contents)
+  - [Step zero](#step-zero)
+  - [Getting started, using Git](#getting-started-using-git)
+  - [Installation instructions](#installation-instructions)
+    - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
+    - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
+    - [Configure macOS](#configure-macos)
+      - [Configure Dotfiles](#configure-dotfiles)
+      - [Configure macOS dock icons](#configure-macos-dock-icons)
+      - [Configure Dock icons](#configure-dock-icons)
+  - [Install App Store Applications](#install-app-store-applications)
+  - [Install Other non-Homebrew or App Store applications, packages, etc](#install-other-non-homebrew-or-app-store-applications-packages-etc)
+  - [Update Instructions](#update-instructions)
+    - [Update packages installed with Homebrew](#update-packages-installed-with-homebrew)
+    - [Update Applications installed with Homebrew](#update-applications-installed-with-homebrew)
+    - [Update Applications installed with `mas`](#update-applications-installed-with-mas)
+  - [Uninstall instructions](#uninstall-instructions)
+  - [Housekeeping](#housekeeping)
+  - [To Do](#to-do)
+  - [Heavily inspired by](#heavily-inspired-by)
 
 ## Step zero
 
@@ -99,7 +102,13 @@ The [`macos/install-apps.sh`](https://github.com/pablordoricaw/my-mac-setup/blob
 
 > To add more apps to be installed refer to the [Usage section of the README](https://github.com/mas-cli/mas#-usage) of `mas`
 
-**Run it:** `source ./macos/install-apps.sh`
+**Run it:** `source ./macos/install.sh`
+
+## Install Other non-Homebrew or App Store applications, packages, etc
+
+Check the individual requirements. For example, Docker requires the Docker Installer to be downloaded from [www.docker.com](www.docker.com).
+
+**Run it:** `source ./other/install.sh`
 
 ## Update Instructions
 
