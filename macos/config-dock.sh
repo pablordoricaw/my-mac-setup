@@ -118,6 +118,5 @@ add_spacer_to_dock
 add_app_to_dock "Calendar"
 add_app_to_dock "Notes"
 add_app_to_dock "Notion"
-add_app_to_dock "Tana"
 
 killall Dock
