@@ -39,10 +39,10 @@ brew install --cask iterm2
 brew install --cask lastpass
 brew install --cask miniconda
 brew install --cask notion
+brew install --cask rectangle
 brew install --cask rocket
 brew install --cask shapr3d
 brew install --cask slack
-brew install --cask spectacle
 brew install --cask spotify
 brew install --cask snapmaker-luban
 brew install --cask visual-studio-code
