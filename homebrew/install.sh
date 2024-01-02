@@ -30,6 +30,7 @@ brew install gh
 brew install git
 brew install htop
 brew install mas
+brew install neovim
 
 echo "⬇️ Installing applications with Homebrew..."
 brew install --cask dozer
