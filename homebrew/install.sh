@@ -28,8 +28,8 @@ echo "⬇️ Installing Homebrew formulae..."
 brew install chezmoi
 brew install gh
 brew install git
-brew install mas
 brew install htop
+brew install mas
 
 echo "⬇️ Installing applications with Homebrew..."
 brew install --cask dozer
@@ -43,8 +43,8 @@ brew install --cask rectangle
 brew install --cask rocket
 brew install --cask shapr3d
 brew install --cask slack
-brew install --cask spotify
 brew install --cask snapmaker-luban
+brew install --cask spotify
 brew install --cask visual-studio-code
 brew install --cask zoom
 
