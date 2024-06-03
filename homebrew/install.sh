@@ -33,6 +33,7 @@ brew install mas
 brew install neovim
 
 echo "⬇️ Installing applications with Homebrew..."
+brew install --cask nikitabobko/tap/aerospace
 brew install --cask dozer
 brew install --cask elgato-control-center
 brew install --cask google-chrome
