@@ -159,6 +159,11 @@ This list contains things that I want this repo to setup in my Mac that I haven'
 
 This list contains ideas to improve this repo
 
+- [ ] Install Command Line Tools during installation
+```bash
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+```
 - [ ] End-to-end setup of Mac with one command
 - [ ] Include dependencies between the setup steps.
   - [ ] A step always runs after the step(s) it depends on.
