@@ -29,6 +29,7 @@ brew install chezmoi
 brew install gh
 brew install git
 brew install htop
+brew install imagemagick
 brew install mas
 brew install neovim
 
