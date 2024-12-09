@@ -15,7 +15,11 @@ if test "$(which mas)"
   echo "⬇️ Installing Notability"
   mas install 360593530 # Notability
   echo "⬇️ Installing Perplexity"
-  mas install 6714467650 # Perplexity
+  # mas install 1875466942 # Perplexity
+
+  # mas lucky install the first result that would be returned by mas search
+  # mas install above not working so going with this route
+  mas lucky "Perplexity: Ask Anything"
 
   echo "⭐ Installed applications!"
 
