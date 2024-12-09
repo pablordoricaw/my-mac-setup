@@ -14,6 +14,8 @@ if test "$(which mas)"
   mas install 1191449274 # ToothFairy
   echo "⬇️ Installing Notability"
   mas install 360593530 # Notability
+  echo "⬇️ Installing Perplexity"
+  mas install 6714467650 # Perplexity
 
   echo "⭐ Installed applications!"
 
