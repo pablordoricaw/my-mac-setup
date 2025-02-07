@@ -42,6 +42,7 @@ brew install --cask ghostty
 brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask lastpass
+brew install --cask mactex
 brew install --cask miniconda
 brew install --cask notion
 brew install --cask rectangle
