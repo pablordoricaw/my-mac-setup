@@ -32,6 +32,7 @@ brew install htop
 brew install imagemagick
 brew install mas
 brew install neovim
+brew install tree
 
 echo "⬇️ Installing applications with Homebrew..."
 brew install --cask nikitabobko/tap/aerospace
@@ -47,9 +48,9 @@ brew install --cask miniconda
 brew install --cask notion
 brew install --cask rectangle
 brew install --cask rocket
-brew install --cask shapr3d
+# brew install --cask shapr3d
 brew install --cask slack
-brew install --cask snapmaker-luban
+# brew install --cask snapmaker-luban
 brew install --cask spotify
 brew install --cask visual-studio-code
 brew install --cask zoom
