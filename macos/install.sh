@@ -16,6 +16,8 @@ if test "$(which mas)"
   mas install 360593530 # Notability
   echo "⬇️ Installing Perplexity"
   # mas install 1875466942 # Perplexity
+  echo "⬇️ Installing Kindle"
+  mas install 302584613
 
   # mas lucky install the first result that would be returned by mas search
   # mas install above not working so going with this route
