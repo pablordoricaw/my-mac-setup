@@ -109,8 +109,7 @@ add_app_to_dock "Spotify"
 add_app_to_dock "LastPass"
 add_app_to_dock "Google Chrome"
 add_spacer_to_dock
-add_app_to_dock "Visual Studio Code"
-add_app_to_dock "iTerm"
+add_app_to_dock "Ghostty"
 add_spacer_to_dock
 add_app_to_dock "Messages"
 add_app_to_dock "Slack"
