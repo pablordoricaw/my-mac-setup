@@ -39,6 +39,7 @@ brew install --cask nikitabobko/tap/aerospace
 brew install --cask adobe-acrobat-pro
 brew install --cask dozer
 brew install --cask elgato-control-center
+brew install --cask firefox
 brew install --cask ghostty
 brew install --cask google-chrome
 brew install --cask iterm2
