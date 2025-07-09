@@ -107,7 +107,7 @@ add_app_to_dock "System Settings" # System Preferences
 add_spacer_to_dock
 add_app_to_dock "Spotify"
 add_app_to_dock "LastPass"
-add_app_to_dock "Google Chrome"
+add_app_to_dock "Firefox"
 add_spacer_to_dock
 add_app_to_dock "Ghostty"
 add_spacer_to_dock
