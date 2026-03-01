@@ -113,6 +113,7 @@ add_app_to_dock "Ghostty"
 add_spacer_to_dock
 add_app_to_dock "Messages"
 add_app_to_dock "Slack"
+add_app_to_dock "WhatsApp"
 add_spacer_to_dock
 add_app_to_dock "Calendar"
 add_app_to_dock "Notes"

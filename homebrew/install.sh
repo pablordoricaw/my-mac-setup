@@ -54,6 +54,7 @@ brew install --cask slack
 # brew install --cask snapmaker-luban
 brew install --cask spotify
 brew install --cask visual-studio-code
+brew install --cask whatsapp
 brew install --cask zoom
 
 echo "This session will be terminated. Open a new session to use the newly installed formulae"
