@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-echo -e "\\n⬇️  Configure macOS dock"
+# shellcheck source=lib/profile.sh
+source ./lib/profile.sh
+resolve_profile "$1" || exit 1
+
+echo -e "\\n⬇️  Configure macOS dock for profile '${PROFILE}'"
 
 # ./dock - contributed by @rpavlick
 # https://github.com/rpavlick/add_to_dock
@@ -102,21 +106,15 @@ function clear_dock {
 # WARNING: permanently clears existing dock
 clear_dock
 
-# add_app_to_dock "Finder" Automatically added
-add_app_to_dock "System Settings" # System Preferences
-add_spacer_to_dock
-add_app_to_dock "Spotify"
-add_app_to_dock "LastPass"
-add_app_to_dock "Firefox"
-add_spacer_to_dock
-add_app_to_dock "Ghostty"
-add_spacer_to_dock
-add_app_to_dock "Messages"
-add_app_to_dock "Slack"
-add_app_to_dock "WhatsApp"
-add_spacer_to_dock
-add_app_to_dock "Calendar"
-add_app_to_dock "Notes"
-add_app_to_dock "Notability"
+# Finder is added by macOS automatically.
+# Layout comes from macos/dock.${PROFILE}: a "---" line is a spacer,
+# any other line is an app name.
+while IFS= read -r item; do
+  if [[ "$item" == "---" ]]; then
+    add_spacer_to_dock
+  else
+    add_app_to_dock "$item"
+  fi
+done < <(read_list "macos/dock.${PROFILE}")
 
 killall Dock

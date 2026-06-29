@@ -1,0 +1,3 @@
+# Chrome extensions force-installed for every profile.
+# Format: <extension-id>   # name   (id is the 32-char id from the Web Store URL)
+dbepggeogbaibhgnhhndojpepiihcmeb   # Vimium

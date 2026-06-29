@@ -12,12 +12,14 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
   - [Step zero](#step-zero)
   - [Getting started, using Git](#getting-started-using-git)
   - [Installation instructions](#installation-instructions)
+    - [Profiles](#profiles)
     - [Installing Homebrew, binaries, and applications](#installing-homebrew-binaries-and-applications)
     - [Configure SSH Key for GitHub](#configure-ssh-key-for-github)
     - [Configure macOS](#configure-macos)
       - [Configure Dotfiles](#configure-dotfiles)
       - [Configure macOS dock icons](#configure-macos-dock-icons)
       - [Configure Dock icons](#configure-dock-icons)
+      - [Configure browser extensions](#configure-browser-extensions)
   - [Install App Store Applications](#install-app-store-applications)
   - [Install Other non-Homebrew or App Store applications, packages, etc](#install-other-non-homebrew-or-app-store-applications-packages-etc)
   - [Update Instructions](#update-instructions)
@@ -25,6 +27,7 @@ As you can see, heavily depend on :beer: [Homebrew](brew.sh)
     - [Update Applications installed with Homebrew](#update-applications-installed-with-homebrew)
     - [Update Applications installed with `mas`](#update-applications-installed-with-mas)
   - [Uninstall instructions](#uninstall-instructions)
+    - [Remove force-installed browser extensions](#remove-force-installed-browser-extensions)
   - [Housekeeping](#housekeeping)
   - [To Do](#to-do)
   - [Heavily inspired by](#heavily-inspired-by)
@@ -46,6 +49,34 @@ git clone https://github.com/pablordoricaw/my-mac-setup.git && cd my-mac-setup
 ```
 
 ## Installation instructions
+
+### Profiles
+
+The setup supports **profiles** so a different set of configurations and applications gets
+installed depending on the machine. Two profiles ship by default:
+
+- `personal` — installs everything (the default).
+- `work` — installs a selected subset (e.g. skips Docker).
+
+A profile is two things:
+
+1. **A manifest** (`profiles/<profile>.txt`) listing which scripts run, in order.
+2. **Per-profile app lists** layered on top of shared `*.common` lists:
+   - Homebrew: `homebrew/formulae.<profile>` and `homebrew/casks.<profile>`
+   - App Store: `macos/mas.<profile>`
+   - Dock: `macos/dock.<profile>`
+
+**Run the whole setup for a profile** (from the repo root):
+
+```bash
+./installer.sh work      # or: ./installer.sh personal  (default if omitted)
+```
+
+Every individual script also accepts the profile as its first argument, e.g.
+`source ./homebrew/install.sh work`. If omitted it defaults to `personal`.
+
+**Add a new profile** by creating `profiles/<name>.txt` plus the matching
+`*.<name>` app lists (any you omit fall back to just the `*.common` items).
 
 ### Installing Homebrew, binaries, and applications
 
@@ -90,6 +121,22 @@ The `~/.macos` file applied with `chezmoi` will config macOS.
 The [`macos/config-dock.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/macos/config-dock.sh) script will clear and add specific application icons to the dock.
 
 **Run it:** `source ./macos/config-dock.sh`
+
+#### Configure browser extensions
+
+**Pre-requisites**: (Soft) Google Chrome and/or Firefox installed. Each browser is skipped
+if it isn't installed.
+
+The [`browsers/config-extensions.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/browsers/config-extensions.sh)
+script force-installs extensions via each browser's managed-policy mechanism (Chrome's
+`ExtensionInstallForcelist` defaults key; Firefox's `policies.json`). Extensions are read
+from the per-profile lists in `browsers/` (`chrome.<profile>` / `firefox.<profile>` layered
+on `*.common`). Vimium is installed by default for both. Restart the browser to apply, and
+note force-installed extensions appear as **managed** and can't be removed from within the
+browser.
+
+**Run it:** `source ./browsers/config-extensions.sh` (optionally pass a profile, e.g.
+`source ./browsers/config-extensions.sh work`)
 
 ## Install App Store Applications
 
@@ -141,6 +188,30 @@ Inside the folders there are scripts that start with `uninstall-` or `reset-`. U
 To execute the scripts use the `source` command followed by the path to the script.
 
 **Important:** Be sure to check the pre-requisites section of the section in the installation instructions, as the same pre-requisites will apply to execute these scripts.
+
+### Remove force-installed browser extensions
+
+Extensions configured with [`browsers/config-extensions.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/browsers/config-extensions.sh)
+are **force-installed via managed policies**, so they cannot be removed from within the
+browser. Undo them as follows:
+
+- **Chrome** — delete the managed force-install list, then restart Chrome:
+
+  ```bash
+  defaults delete com.google.Chrome ExtensionInstallForcelist
+  ```
+
+- **Firefox** — delete the generated policy file, then restart Firefox (use `sudo` if the
+  file isn't writable):
+
+  ```bash
+  rm "/Applications/Firefox.app/Contents/Resources/distribution/policies.json"
+  ```
+
+To drop a **single** extension instead, remove its line from the matching
+`browsers/chrome.<profile>` / `browsers/firefox.<profile>` (or `*.common`) list and re-run
+`source ./browsers/config-extensions.sh` — the script rewrites each browser's policy from the
+lists, so the removed extension is no longer force-installed.
 
  > **Note:** If you're looking to uninstall all packages and applications and reset all configs consider looking into Apple's docs to [Erase your Mac and reset it to factory settings](https://support.apple.com/en-us/HT212749#:~:text=From%20the%20Apple%20menu%20%EF%A3%BF,Erase%20All%20Content%20and%20Settings.)
 

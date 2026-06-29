@@ -1,20 +1,33 @@
 #!/usr/bin/env bash
 
-# Find and run all installers.
+# Profile-aware installer. Run from the repo root:
+#   ./installer.sh [profile]      (profile defaults to "personal")
 
-parent_path=$( pwd -P )
+parent_path=$(pwd -P)
 cd "$parent_path" || exit
 
-echo "\\n🔎 Installers found..."
-find . -name "install.sh" | while read -r installer ; do echo "  - ${installer}" ; done
+# shellcheck source=lib/profile.sh
+source ./lib/profile.sh
+resolve_profile "$1" || exit 1
 
-echo "";
+echo ""
+echo "📦 Setup profile: ${PROFILE}"
+echo "🔎 Scripts to run:"
+while IFS= read -r script; do
+  echo "  - ${script}"
+done < <(read_list "profiles/${PROFILE}.txt")
 
-read -r -q "REPLY?Proceed with installation? (y/n) ";
+echo ""
+read -r -q "REPLY?Proceed with the '${PROFILE}' setup? (y/n) "
+echo ""
 
-echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo "⚙️  Running installers..."
-  # shellcheck source=/dev/null
-  find . -name "install.sh" | while read -r installer ; do source "${installer}" ; done
-fi;
+  export RUN_BY_INSTALLER=1
+  echo "⚙️  Running scripts..."
+  while IFS= read -r script; do
+    echo ""
+    echo "▶️  ${script}"
+    # shellcheck source=/dev/null
+    source "./${script}" "$PROFILE"
+  done < <(read_list "profiles/${PROFILE}.txt")
+fi

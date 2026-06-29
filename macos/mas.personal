@@ -1,0 +1,8 @@
+# App Store apps installed only for the "personal" profile.
+# Format: <app-id>   # name   (or)   lucky:<search query>
+1284863847   # Unsplash Wallpaper
+1191449274   # ToothFairy
+360593530    # Notability
+302584613    # Kindle
+# `mas install 1875466942` (Perplexity) is unreliable, so install via search:
+lucky:Perplexity: Ask Anything

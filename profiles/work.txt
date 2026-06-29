@@ -1,0 +1,9 @@
+# Scripts run for the "work" profile, in order.
+# Paths are relative to the repo root.
+# (other/install.sh / Docker is intentionally omitted here.)
+homebrew/install.sh
+github/config-ssh-key.sh
+dotfiles/config-dotfiles.sh
+macos/install.sh
+macos/config-dock.sh
+browsers/config-extensions.sh

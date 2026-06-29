@@ -1,27 +1,31 @@
 #!/usr/bin/env bash
 
-echo "⬇️ Installing App Store applications..."
-echo "📝 Note that you need to have the CLI tool mas installed."
-read -r -q "REPLY?Do you want to continue the installation? (y/n)";
-echo "";
+# shellcheck source=lib/profile.sh
+source ./lib/profile.sh
+resolve_profile "$1" || exit 1
+
+echo "⬇️ Installing App Store applications for profile '${PROFILE}'..."
+echo "📝 Note that you need mas installed and to be signed into the App Store."
+read -r -q "REPLY?Do you want to continue the installation? (y/n)"
+echo ""
+
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  # skip this step without killing the parent installer when sourced
+  return 0 2>/dev/null || exit 0
+fi
 
 if test "$(which mas)"
   then
-  
-  echo "⬇️ Installing Unsplash Wallpaper..."
-  mas install 1284863847 # Unsplash Wallpaper
-  echo "⬇️ Installing TootFairy"
-  mas install 1191449274 # ToothFairy
-  echo "⬇️ Installing Notability"
-  mas install 360593530 # Notability
-  echo "⬇️ Installing Perplexity"
-  # mas install 1875466942 # Perplexity
-  echo "⬇️ Installing Kindle"
-  mas install 302584613
-
-  # mas lucky install the first result that would be returned by mas search
-  # mas install above not working so going with this route
-  mas lucky "Perplexity: Ask Anything"
+  while IFS= read -r app; do
+    if [[ "$app" == lucky:* ]]; then
+      query="${app#lucky:}"
+      echo "⬇️ Installing (via search) ${query}..."
+      mas lucky "$query"
+    else
+      echo "⬇️ Installing app id ${app}..."
+      mas install "$app"
+    fi
+  done < <(read_list macos/mas.common; read_list "macos/mas.${PROFILE}")
 
   echo "⭐ Installed applications!"
 

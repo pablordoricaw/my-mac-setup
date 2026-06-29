@@ -1,0 +1,2 @@
+# Firefox add-ons force-installed only for the "work" profile.
+# Format: <addon-id> <amo-slug>   # name

@@ -1,0 +1,13 @@
+# Dock layout for the "work" profile (top-to-bottom = left-to-right).
+# Each line is an app name; a line of "---" inserts a spacer.
+System Settings
+---
+Google Chrome
+---
+Ghostty
+---
+Messages
+Slack
+---
+Calendar
+Notes
