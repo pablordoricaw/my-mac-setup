@@ -12,10 +12,12 @@ if test "$(gh --version)"
   echo -e "Host ${host}\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/${key_name}" >> ${HOME}/.ssh/config
   ssh-add --apple-use-keychain $HOME/.ssh/${key_name}
 
-  echo "🔁 Adding your SSH key to your GitHub account..."
-  gh ssh-key add $HOME/.ssh/${key_name}.pub
-  
-  echo "🗝️ SSH Key name 'user@computername'"
+  echo "🔐 Logging in to GitHub over SSH and uploading your key..."
+  echo "   When prompted:"
+  echo "     - pick a way to authenticate (web browser or a token)"
+  echo "     - select the public key '${key_name}.pub' to upload"
+  echo "     - give it a title, e.g. 'user@computername'"
+  gh auth login --git-protocol ssh
   
   echo "🔁 Testing SSH connection with GitHub..."
   ssh -T git@github.com

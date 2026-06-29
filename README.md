@@ -90,9 +90,21 @@ The [`homebrew/install.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/m
 
 ### Configure SSH Key for GitHub
 
-**Pre-requisites**: Needs the [Github CLI `gh`](https://cli.github.com/) installed.
+**Pre-requisites**: Needs the [Github CLI `gh`](https://cli.github.com/) installed (it is
+installed by `homebrew/install.sh`).
 
-The [`github/config-ssh-key.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/github/config-ssh-key.sh) script will generate a new SSH key and add it to your GitHub account.
+The [`github/config-ssh-key.sh`](https://github.com/pablordoricaw/my-mac-setup/blob/main/github/config-ssh-key.sh)
+script will:
+
+1. Generate a new `ed25519` SSH key (`~/.ssh/github_id_ed25519`).
+2. Add it to the `ssh-agent` and your `~/.ssh/config`.
+3. Log you in to GitHub over SSH with `gh auth login --git-protocol ssh`, uploading the new
+   key to your account as part of the login.
+4. Test the SSH connection to GitHub.
+
+The login step is **interactive**: when prompted, pick how to authenticate (web browser or a
+token), select the `github_id_ed25519.pub` key to upload, and give it a title (e.g.
+`user@computername`). `gh` requests the `admin:public_key` scope it needs automatically.
 
 **Run it:** `source ./github/config-ssh-key.sh`
 
